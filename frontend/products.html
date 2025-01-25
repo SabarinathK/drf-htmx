@@ -1,0 +1,11 @@
+<h2>Products</h2>
+<button hx-get="http://127.0.0.1:8000/api/products/" hx-target="#product-list">Load Products</button>
+<div id="product-list"></div>
+
+<!-- Form to create a new product -->
+<h3>Add Product</h3>
+<form hx-post="http://127.0.0.1:8000/api/products/" hx-target="#product-list" hx-swap="outerHTML">
+    <input name="name" type="text" placeholder="Product Name" required/>
+    <input name="price" type="number" placeholder="Product Price" required step="0.01"/>
+    <button type="submit">Add Product</button>
+</form>
